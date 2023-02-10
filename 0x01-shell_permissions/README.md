@@ -1,1 +1,1 @@
-my secong readme
+Shell permissions
