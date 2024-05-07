@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Displays a list of currently running processes.
 
+echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
+echo "----------------------------------------------------------------------"
 # Use ps command with custom formatting to get the desired output
 ps axo user,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm --forest
