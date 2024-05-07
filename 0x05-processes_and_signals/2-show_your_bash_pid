@@ -2,4 +2,5 @@
 
 # shellcheck disable=SC2009
 # Display lines containing the word "bash" and extract the PID
-ps -a -x -u -f | grep bash
+
+./1-list_your_processes | grep "bash"
