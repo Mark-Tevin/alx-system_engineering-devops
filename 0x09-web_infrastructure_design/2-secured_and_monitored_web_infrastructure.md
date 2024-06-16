@@ -2,8 +2,6 @@
 
 ![Image of a secured and monitored infrastructure](https://imgur.com/lsdoVrv)
 
-[Visit Board](https://imgur.com/lsdoVrv/)
-
 ## Description
 
 This is a 3-server web infrastructure that is secured, monitored, and serves encrypted traffic.
