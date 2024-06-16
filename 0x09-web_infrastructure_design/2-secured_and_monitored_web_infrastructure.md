@@ -1,6 +1,6 @@
 # Secured and Monitored Web Infrastructure
 
-![Image of a secured and monitored infrastructure](https://imgur.com/lsdoVrv)
+https://imgur.com/lsdoVrv
 
 ## Description
 
