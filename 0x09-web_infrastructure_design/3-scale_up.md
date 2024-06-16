@@ -1,6 +1,6 @@
 # Scaled Up Web Infrastructure
 
-[Image URL](https://imgur.com/97R6ge8=/)
+[Image URL](https://imgur.com/97R6ge8)
 
 ## Description
 
