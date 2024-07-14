@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Install and configure HAProxy on lb-01 server
+# Configure HAProxy to send traffic to web-01 and web-02 servers
+# Distribute requests using a roundrobin algorithm
+# Make sure that HAProxy can be managed via an init script
+
+# Install and configure HAproxy on my lb-01 server.
+sudo apt-get -y update
+apt-get -y install haproxy
+
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+cat <<EOT | sudo tee -a /etc/haproxy/haproxy.cfg
+frontend tevinsmark.tech
+        # sets a custom client inactivity timeout of 30 sec
+        timeout client  30000
+        bind 0:80
+        default_backend Millantech.tech_backend
+
+backend Millantech.tech_backend
+        timeout connect 3000
+        timeout server 30000
+        balance roundrobin
+        server 31431-web-01 54.157.136.2:80 check
+        server 31431-web-02 3.85.33.107:80 check
+
+EOT
+
+# Testing the HAproxy configuration file
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
+# Restart the Nginx service
+sudo service haproxy restart
