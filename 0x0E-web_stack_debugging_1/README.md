@@ -12,5 +12,7 @@ will be reflected in the default file in the
 sites-enabled directory.
 ```
 > kill "$(pgrep 'nginx' | head -1)"
+```
 This command finds the process ID(PID) on the first Nginx process by using'the pgrep command and then
-> sends a termination signal (SIGTERM) to that process using the kill command
+sends a termination signal (SIGTERM) to that process using the kill command
+```
