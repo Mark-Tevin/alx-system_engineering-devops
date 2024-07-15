@@ -2,7 +2,7 @@
 
 > we create a symbolic link between configuration files located at
 ```
-> /etc/nginx/sites-available/default
+/etc/nginx/sites-available/default
 and
 /etc/nginx/sites-enabled/default
 The sites-available directory contains the available configuration files,
