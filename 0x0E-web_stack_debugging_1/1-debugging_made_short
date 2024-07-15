@@ -2,4 +2,4 @@
 # service (init) must say that nginx is not running ← for real
 service nginx start && ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 nginx_pid=$(pgrep 'nginx' | head -1) && [ -n "$nginx_pid" ] && kill "$nginx_pid"
-nginx_pid=$(pgrep 'nginx' | head -1) && [ -z "$nginx_pid" ] && echo "Nginx is not running"
+pgrep 'nginx' > /dev/null && nginx -s stop
