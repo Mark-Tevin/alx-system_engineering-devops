@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-# make it short
-apt-get -y update
-apt-get install -y nginx
-sudo service nginx start
+# Configure a nginx server to listen to port 80
+
+# we create our symbolic link (-s option) btwn the Nginx configuration file
+# and sites enabled directory
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# restart nginx
+service nginx start
+# terminate first nginx process ID
+kill "$(pgrep 'nginx' | head -1)"
