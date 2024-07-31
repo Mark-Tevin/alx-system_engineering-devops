@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # Bash script that uses ssh to connect to your server using the private key ~/.ssh/school with the user ubuntu
+# Setting up the SSH agent
+eval $("ssh-agent")
 ssh -i ~/.ssh/school ubuntu@54.172.244.56
