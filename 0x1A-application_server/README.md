@@ -1,4 +1,4 @@
-Here’s a structured and informative README for your AirBnB clone project:
+Here’s a structured and informative README for your Application server project:
 
 ---
 
